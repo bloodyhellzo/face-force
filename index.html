@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <title>전투력 측정</title>
+            <meta name="subject" content="내 얼굴의 전투력은?">
+            <meta name="keywords" content="관상, 관상 테스트, 스카우터, 드래곤볼, 전투력, 포스, 인상, 스카우트, 프리저, 프리더, 초사이어인, 손오공, 베지터">
+            <meta name="description" content="인공지능 AI가 어려분의 전투력을 측정 해 드립니다.">
+            <meta name="author" content="소테">
+            <link rel="canonical" href="https://face-force.cf/" />
+            <meta property="og:url" content="https://face-force.cf" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="얼굴 전투력 측정" />
+            <meta property="og:description" content="인공지능 AI가 어려분의 전투력을 측정 해 드립니다."/>
+            <meta property="og:image" content="img/main.jpg" />    
+        
+        <meta name="naver-site-verification" content="204e0078df815ea1df703a031555038162c961f3" />
+        <link rel="stylesheet" href="style.css" />
+
+    </head>
+   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f50ab8a2bd6a690"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-145482737-6');
+    </script>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+            <a class="navbar-brand" href="#">얼굴 전투력 테스트</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://collegeface.cf">얼굴 전투력<span class="sr-only">(current)</span></a>
+                    </li>
+                   <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+                            >Disabled</a> 
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+        <section
+            class="container d-flex flex-column justify-content-center align-items-center"
+        ></section>
+        <section class="section">
+            <h1 class="title">스카우터<br>이 생물의 전투력을 측정하세욧!</h1>
+            <h2 class="subtitle">
+
+            </h2>
+        </section>
+      
+        <h3 class="mt-4 pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+        <section class="d-flex justify-content-center">
+            <p class="d-flex align-items-center pr-3">여자</p>
+            <div>
+                <input type="checkbox" id="gender" />
+                <label for="gender">
+                    <span class="knob">
+                        <i></i>
+                    </span>
+                </label>
+            </div>
+            <p class="d-flex align-items-center pl-3">남자</p>
+        </section>
+
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+        ></script>
+        <div class="mt-3 container file-upload">
+            <div class="image-upload-wrap">
+                <input
+                    class="file-upload-input"
+                    type="file"
+                    onchange="readURL(this);"
+                    accept="image/*"
+                />
+                <div class="drag-text">
+                    <img src="img/scouter.jpg" class="mt-3 pt-3 upload" alt="upload-image" />
+                    <h3 class="mb-3 pb-3 pt-3 upload-text">
+                        호오~~ 여기를 눌러<br>얼굴 사진을 업로드하세욧!
+                    </h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                <div id="loading" class="animated bounce">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p class="text-center">삐 비 비 비 빗<br>(전투력 측정 중....)</p>
+                </div>
+                <p class="result-message"></p>
+                <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <div id="addThis" class="mt-5 addthis_inline_share_toolbox"></div>
+                <div class="pt-3 image-title-wrap">
+                    <button type="button p-2" class="try-again-btn" onclick="gaReload()">
+                        <span class="try-again-text">다른 사진으로 재시도</span>
+                    </button>                   
+                </div>
+            </div>
+        </div>
+        <br><br>
+          <section class="youtube">
+            <div class="container mt-2 youtube-cover d-flex flex-row-reverse">
+                <img src="img/youtube-copy.jpg" alt="youtube-icon" class="youtube-icon" />
+                <a href="https://www.youtube.com/c/%EC%A1%B0%EC%BD%94%EB%94%A9JoCoding/featured" class="youtube-link" target="_blank">'얼굴 전투력'은 조코딩 유튜브 채널을 참고하여 만들었습니다!</a>
+            </div>
+              <br>
+        </section>
+        <div class="container pt-3">
+        <div id="disqus_thread"></div>
+        </div>
+        <section>
+            
+        <div class="ad-kakao">
+            <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ubp51aurv3ol" 
+ data-ad-width   = "300" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        </div>
+            
+            
+        <footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy;소테(SOTE) All Rights Reserved.&nbsp;&nbsp;상호: 소테<br>사업자등록번호:849-17-00311&nbsp;&nbsp;대표: 최재훈</p>
+            <ul class="list-inline d-flex justify-content-center">
+                <li><a href="https://collegeface.cf/privacy.html">Privacy</a></li>&nbsp;&nbsp;
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+        </footer>
+        </section>
+        <script>
+            function gaReload() {
+                gtag('event', '다른 사진으로 재시도', {
+                    event_category: '다른 사진으로 재시도',
+                });
+                window.location.reload();
+            }
+            function gaReload1() {
+                gtag('event', '다른 사진으로 재시도 1차', {
+                    event_category: '다른 사진으로 재시도',
+                });
+                window.location.reload();
+            }
+            function gaReload2() {
+                gtag('event', '다른 사진으로 재시도 2차', {
+                    event_category: '다른 사진으로 재시도',
+                });
+                window.location.reload();
+            }
+        </script>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+            (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://wellstech.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>                  
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"
+        ></script>
+
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+                        $('#loading').show();
+                        $('#result-ytb').hide();
+
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+
+                        $('.image-title').html(input.files[0].name);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(function () {
+                        predict();
+                        $('#loading').hide();
+                        setTimeout(()=> $('#result-ytb').show(),700);
+                        
+                    });                           
+                    
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+        </script>
+
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+            // the link to your model provided by Teachable Machine export panel
+            const urlMale = 'https://teachablemachine.withgoogle.com/models/SaAmKGMpF/';
+            const urlFemale = 'https://teachablemachine.withgoogle.com/models/wgPj2XLo4/';
+            
+            let model, webcam, labelContainer, maxPredictions;
+
+            // Load the image model and setup the webcam
+
+            async function init() {
+                if(document.getElementById("gender").checked){
+                    URL=urlMale;
+                }else{
+                    URL=urlFemale;
+                }
+                const modelURL = URL + 'model.json';
+                const metadataURL = URL + 'metadata.json';
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+                labelContainer = document.getElementById('label-container');
+                for (let i = 0; i < maxPredictions; i++) {
+                    // and class labels
+                    var element = document.createElement('div');
+                    element.classList.add('d-flex');
+                    labelContainer.appendChild(element);
+                }
+            }
+
+            // run the webcam image through the image model
+
+            async function predict() {
+                // predict can take in an image, video or canvas html element
+                var image = document.getElementById('face-image');
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                var resultTitle, resultExplain, resultCeleb, resultUrl;
+                if(document.getElementById("gender").checked){
+                     gtag('event','남자 전투력 측정 테스트', {
+                    'event_category': '전투력 테스트 수행',
+                    'event_label': '남자'
+                });
+                    
+                switch (prediction[0].className) {
+                    case '신화급':
+                        resultTitle = '신화급(SS 랭크)';
+                        resultExplain = '자네 나와 함께 전 우주를<br>차지하지 않겠나~~!!??<br>자네 얼굴이라면 싸우지 않고도<br>행성 하나쯤은 손에 넣을 수 있을정도야!!';
+                        resultCeleb = '신화급 연예인: 마동석, 추성훈, 유오성';
+                        resultUrl = 'results/1.jpg';
+                        gtag('event', '남자 전투력 측정 결과 신화급', {'event_category': '남자 결과'});
+                        break;
+                    case '전설급':
+                        resultTitle = '전설급(SA 랭크)';
+                        resultExplain = '자네는 초사이이언이야!!!<br>지구를 너에게 맡긴다!!<br>무서운 녀석!!';
+                        resultCeleb = '신화급 방송인: 박성웅, 정만식';
+                        resultUrl = 'results/2.jpg';
+                        gtag('event', '남자 전투력 측정 결과 전설급', {'event_category': '남자 결과'});
+                        break;
+                    case '학교짱급':
+                        resultTitle = '학교짱급(A 랭크)';
+                        resultExplain = '호오 당신 얼굴 상당히 흥미롭군요!!<br>아니!! 후...훌륭하군요!!';
+                        resultCeleb = '학교짱급 연예인: 고창석, 서장훈, 윤제문';
+                        resultUrl = 'results/3.jpg';
+                        gtag('event', '남자 전투력 측정 결과 학교짱급', {'event_category': '남자 결과'});
+                        break;
+                    case '학급짱급':
+                        resultTitle = '학급짱급(B 랭크)';
+                        resultExplain = '호오 당신정도면 피콜로 더듬이<br>정도는 꺾을 수 있겠군요!! ';
+                        resultCeleb = '학급짱급 연예인: 윤제문, 안길강, 금광산';
+                        resultUrl = 'results/4.jpg';
+                        gtag('event', '남자 전투력 측정 결과 학급짱급', {'event_category': '남자 결과'});
+                        break;
+                    case '평화주의자':
+                        resultTitle = '평화주의자(일반시민 랭크)';
+                        resultExplain = '이런.....크리링의 탈을 쓴 평화주의자인가 보군요!!<br>아니!! 크리링보다 아래인가??<br>하지만 잘생긴것이 더 나을 수 있겠군요!!';
+                        resultCeleb = '평화주의자 연예인: 송준기, 정해인, 박보검';
+                        resultUrl = 'results/5.jpg';
+                        gtag('event', '남자 전투력 측정 결과 평화주의자', {'event_category': '남자 결과'});
+                        break;
+                    default:
+                        resultTitle = '스카우터 고장';
+                        resultExplain = '';
+                        resultCeleb = '';
+                        resultUrl = '';
+                        gtag('event', '남자 전투력 측정 결과 알수없음', {'event_category': '남자 결과'});
+                }
+                }else{
+                     gtag('event','여자 전투력 측정 테스트', {
+                    'event_category': '전투력 테스트 수행',
+                    'event_label': '여자'
+                });
+                 switch (prediction[0].className) {
+                   case '신화급':
+                        resultTitle = '신화급(SS 랭크)';
+                        resultExplain = '자네 나와 함께 전 우주를<br>차지하지 않겠나~~!!??<br>자네 얼굴이라면 싸우지 않고도<br>행성 하나쯤은 손에 넣을 수 있을정도야!!';
+                        resultCeleb = '신화급 연예인: 제시, 김서형';
+                        resultUrl = 'results/1.jpg';
+                        gtag('event', '여자 전투력 측정 결과 신화급', {'event_category': '여자 결과'});
+                        break;
+                    case '전설급':
+                        resultTitle = '전설급(SA 랭크)';
+                        resultExplain = '자네는 초사이이언이야!!!<br>지구를 너에게 맡긴다!!<br>무서운 녀석!!';
+                        resultCeleb = '신화급 방송인: 치타, 화사, 이용녀';
+                        resultUrl = 'results/2.jpg';
+                        gtag('event', '여자 전투력 측정 결과 전설급', {'event_category': '여자 결과'});
+                        break;
+                    case '학교짱급':
+                        resultTitle = '학교짱급(A 랭크)';
+                        resultExplain = '호오 당신 얼굴 상당히 흥미롭군요!!<br>아니!! 후...훌륭하군요!!';
+                        resultCeleb = '학교짱급 연예인: 가희, 서인영, 안영미';
+                        resultUrl = 'results/3.jpg';
+                        gtag('event', '여자 전투력 측정 결과 학교짱급', {'event_category': '여자 결과'});
+                        break;
+                    case '학급짱급':
+                        resultTitle = '학급짱급(B 랭크)';
+                        resultExplain = '호오 당신정도면 피콜로 더듬이 정도는<br>꺾을 수 있겠군요!!';
+                        resultCeleb = '학급짱급 연예인: 소희, 이영자, 유이';
+                        resultUrl = 'results/4.jpg';
+                        gtag('event', '여자 전투력 측정 결과 학급짱급', {'event_category': '여자 결과'});
+                        break;
+                    case '평화주의자':
+                        resultTitle = '평화주의자(일반시민 랭크)';
+                        resultExplain = '이런.....부르마의 탈을 쓴 평화주의자인가 보군요!!<br>아니!!<br>부르마보다 아래인가?? 하지만 아름다운것이 더 나을 수 있겠군요!!';
+                        resultCeleb = '평화주의자 연예인: 박신혜, 윤아, 수지';
+                        resultUrl = 'results/5.jpg';
+                        gtag('event', '여자 전투력 측정 결과 평화주의자', {'event_category': '여자 결과'});
+                        break;
+                    default:
+                        resultTitle = '스카우터 고장';
+                        resultExplain = '';
+                        resultCeleb = '';
+                        resultUrl = '';
+                        gtag('event', '여자 전투력 측정 결과 알수업음', {'event_category': '여자 결과'});
+                }
+                }
+                    
+                    
+                var title =
+                    "<div class='" + prediction[0].className + "-college-title'>" + resultTitle + '</div>';
+                var explain = "<div class='college-explain pt-2'>" + resultExplain + '</div>';
+                var celeb = "<div class='" + prediction[0].className + "-college-celeb pt-2 pb-2'>" + resultCeleb +'</div>';
+                var ytburl = '<img class="result-img" src="'+resultUrl+'">';                
+
+                $('.result-message').html(title+ ytburl + explain + celeb);
+                console.log(ytburl);
+                // $('.result-ytb-link').html(ytburl);
+                
+                var barWidth;
+                for (let i = 0; i < maxPredictions; i++) {
+                    if (prediction[i].probability.toFixed(2) > 0.1) {
+                        barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
+                    } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                        barWidth = '8%';
+                    } else {
+                        barWidth = '6%';
+                    }
+
+                    var labelTitle;
+                    switch (prediction[i].className) {
+                        case '신화급':
+                            labelTitle = '신화급';
+                            break;
+                        case '전설급':
+                            labelTitle = '전설급';
+                            break;
+                        case '학교짱급':
+                            labelTitle = '학교짱급';
+                            break;
+                        case '학급짱급':
+                            labelTitle = '학급짱급';
+                            break;
+                        case '평화주의자':
+                            labelTitle = '평화주의자';
+                            break;
+                        default:
+                            labelTitle = '스카우터 고장';
+                            break;
+                    }
+                    var label =
+                        "<div class='college-label d-flex align-items-center'>" +
+                        labelTitle +
+                        '</div>';
+                    var bar =
+                        "<div class='bar-container position-relative container'><div class='" +
+                        prediction[i].className +
+                        "-box'></div><div class='d-flex justify-content-center align-items-center " +
+                        prediction[i].className +
+                        "-bar' style='width: " +
+                        barWidth +
+                        "'><span class='d-block percent-text'>" +
+                        Math.round(prediction[i].probability.toFixed(2) * 100) +
+                        '%</span></div></div>';
+                    labelContainer.childNodes[i].innerHTML = label + bar;
+                }
+             
+            }
+        </script>
+    </body>
+    <!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+gender toggle
+Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+</html>
